@@ -1,9 +1,13 @@
 import React from 'react'
 
-function Card() {
+function Card({dataImage, dataPosition}) {
     return(
         <div className='card-div'>
-            {console.log('Card Component loaded')}
+
+            <div className='card'>
+                <img className='card-img-top' href={dataImage} alt='Avatar' />
+            </div>
+
         </div>
     )
     
