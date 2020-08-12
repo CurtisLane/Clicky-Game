@@ -1,0 +1,62 @@
+[
+    {
+        "id": 1,
+        "name": "Aang",
+        "image": "https://vignette.wikia.nocookie.net/avatar/images/a/ae/Aang_at_Jasmine_Dragon.png/revision/latest?cb=20130612174003"
+    },
+    {
+        "id": 2,
+        "name": "Katara",
+        "image": "https://vignette.wikia.nocookie.net/avatar/images/7/7a/Katara_smiles_at_coronation.png/revision/latest?cb=20150104171449"
+    },
+    {
+        "id": 3,
+        "name": "Sokka",
+        "image": "https://vignette.wikia.nocookie.net/avatar/images/c/cc/Sokka.png/revision/latest?cb=20140905085428"
+    },
+    {
+        "id": 4,
+        "name": "Toph",
+        "image": "https://vignette.wikia.nocookie.net/avatar/images/4/46/Toph_Beifong.png/revision/latest?cb=20131230122047"
+    },
+    {
+        "id": 5,
+        "name": "Appa",
+        "image": "https://vignette.wikia.nocookie.net/avatar/images/6/65/Appa_flying.png/revision/latest?cb=20140517110636"
+    },
+    {
+        "id": 6,
+        "name": "Momo",
+        "image": "https://vignette.wikia.nocookie.net/avatar/images/d/d2/Momo.png/revision/latest/scale-to-width-down/340?cb=20140103214812"
+    },
+    {
+        "id": 7,
+        "name": "Zuko",
+        "image": "https://vignette.wikia.nocookie.net/avatar/images/4/4b/Zuko.png/revision/latest?cb=20180630112142"
+    },
+    {
+        "id": 8,
+        "name": "Iroh",
+        "image": "https://vignette.wikia.nocookie.net/avatar/images/c/c1/Iroh_smiling.png/revision/latest?cb=20130626131914"
+    },
+    {
+        "id": 9,
+        "name": "Cabbage Merchant",
+        "image": "https://static.tumblr.com/viwpwkc/saUm4w1hd/cabbage-guy.jpg"
+    },
+    {
+        "id": 10,
+        "name": "Ty Lee",
+        "image": "https://vignette.wikia.nocookie.net/avatar/images/f/f2/Ty_Lee_walking_on_her_hands.png/revision/latest/scale-to-width-down/340?cb=20140517113732"
+    },
+    {
+        "id": 11,
+        "name": "Suki",
+        "image": "https://vignette.wikia.nocookie.net/avatar/images/2/28/Suki_and_two_Kyoshi_Warriors.png/revision/latest?cb=20130819092357"
+    },
+    {
+        "id": 12,
+        "name": "Princess Yue",
+        "image": "https://vignette.wikia.nocookie.net/avatar/images/9/9d/Kind_Yue.png/revision/latest?cb=20140122221734"
+    }
+]

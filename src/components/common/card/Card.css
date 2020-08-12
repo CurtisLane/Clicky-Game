@@ -1,0 +1,8 @@
+
+.card > .img-container {
+    overflow: hidden;
+}
+.card > .img-container > img {
+    width: 100%;
+    min-height: 100%;
+}
