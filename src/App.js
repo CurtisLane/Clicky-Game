@@ -34,15 +34,15 @@ class App extends Component {
   };
 
   handleIncrement = () => {
-    const updatedScore = this.state.currentScore + 1;
+    const updatedScore = this.state.score + 1;
     this.setState({
       score: updatedScore,
-      message: "Correct!"
+      message: ""
     });
     if (updatedScore >= this.state.highScore) {
       this.setState({ highScore: updatedScore });
     }
-    else if (updatedScore === 12) {
+    if (updatedScore === 12) {
       this.setState({ message: "You got them all!! Great work!" });
     }
     this.handleRandomize();
@@ -53,7 +53,7 @@ class App extends Component {
       characters: Characters,
       selected: [],
       score: 0,
-      highScore: this.state.topScore,
+      highScore: this.state.highScore,
       message: 'Game Over! Try again :)' 
     });
     this.handleRandomize();
@@ -68,7 +68,11 @@ class App extends Component {
 
     return (
       <div className="App">
-        <Header />
+        <Header 
+          message = {this.state.message}
+          score = {this.state.score}
+          highScore = {this.state.highScore}
+        />
         <Home>
           {this.state.characters.map(character => (
             <Card 

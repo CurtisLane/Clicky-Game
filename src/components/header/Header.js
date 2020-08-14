@@ -1,19 +1,19 @@
 import React from 'react'
 
-function Header() {
+function Header({message, score, highScore}) {
     return(
 
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
             <a className="navbar-brand" href="#">Avatar Clicky Game!</a>
 
             <div className="mx-auto">
-                {/* correct or incorrect message */}
+                {message || 'Click any image to start but DON\'T click the same image twice!'}
             </div>
             
             <div className="ml-auto" id="navbar-text">
             
                 <span className="navbar-text">
-                    Score: {/*score*/} | Top Score: {/*topScore*/}
+                    Score: {score} | Top Score: {highScore}
                 </span>
 
             </div>
