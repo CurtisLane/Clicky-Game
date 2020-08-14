@@ -13,7 +13,9 @@ class App extends Component {
     selected: [],
     score: 0,
     highScore: 0,
-    message: ''    
+    message: '',
+    round: 1,
+    previousRound: 1
   }
 
   randomize = characterArr => {
@@ -25,7 +27,7 @@ class App extends Component {
   };
 
   handleClick = id => {
-    if (this.state.selected.indexOf(id) === -1) {
+    if (this.state.selected.indexOf(id) === -1 || this.state.score % 12 === 0) {
       this.handleIncrement();
       this.setState({ selected: this.state.selected.concat(id) });
     } else {
@@ -42,17 +44,36 @@ class App extends Component {
     if (updatedScore >= this.state.highScore) {
       this.setState({ highScore: updatedScore });
     }
+    if (this.state.round > this.state.previousRound && (updatedScore + this.state.highScore) >= this.state.highScore ){
+      this.setState({ highScore: this.state.highScore + 1})
+    }
     if (updatedScore === 12) {
-      this.setState({ message: "You got them all!! Great work!" });
+      this.handleGameWin()
     }
     this.handleRandomize();
   };
 
-  handleGameover = () => {
-    this.setState({
-      characters: Characters,
+  handleGameWin = () => {
+    this.setState({ 
       selected: [],
       score: 0,
+      message: "You got them all!! Great work!",
+      round: this.state.round + 1,
+      previousRound: this.state.round - 1,
+    }, function(){
+      this.setState({
+        selected: []
+      })
+    });
+    this.handleRandomize();
+  }
+
+  handleGameover = () => {
+    this.setState({
+      selected: [],
+      score: 0,
+      round: 1,
+      previousRound: 1,
       highScore: this.state.highScore,
       message: 'Game Over! Try again :)' 
     });
@@ -72,6 +93,7 @@ class App extends Component {
           message = {this.state.message}
           score = {this.state.score}
           highScore = {this.state.highScore}
+          round = {this.state.round}
         />
         <Home>
           {this.state.characters.map(character => (
