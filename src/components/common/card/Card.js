@@ -1,7 +1,7 @@
 import React from 'react'
 import './Card.css'
 
-function Card({name, image}) {
+function Card({id, name, image}) {
     return(
         <div className='col-4 col-md-3 my-3'>
 
