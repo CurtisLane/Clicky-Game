@@ -5,7 +5,6 @@ import Card from './components/common/card/Card'
 import Characters from './characters.json'
 import Header from './components/header/Header';
 
-
 class App extends Component {
 
   state = {
