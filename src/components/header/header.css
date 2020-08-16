@@ -1,0 +1,11 @@
+.blink-bg{
+    animation: blinkingBackground .25s normal;
+    background: #f7f7f7;
+}
+@keyframes blinkingBackground{
+    0%		{ background-color: #e53935;}
+    25%		{ background-color: #e53935;}
+    50%		{ background-color: #e53935;}
+    75%		{ background-color: #e53935;}
+    100%	        { background-color: #e53935;}
+}

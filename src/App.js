@@ -78,7 +78,7 @@ class App extends Component {
       round: 1,
       previousRound: 1,
       highScore: this.state.highScore,
-      message: 'Game Over! Try again :)',
+      message: 'Game Over! Select any character card to try again.',
       gameOver: true
     });
     this.handleRandomize();
@@ -88,6 +88,10 @@ class App extends Component {
     let randomCharacters = this.randomize(Characters);
     this.setState({ characters: randomCharacters });
   };
+
+  componentDidMount(){
+    this.handleRandomize()
+  }
   
   render(){
 
@@ -98,6 +102,8 @@ class App extends Component {
           score = {this.state.score}
           highScore = {this.state.highScore}
           round = {this.state.round}
+          gameOver = {this.state.gameOver}
+          wonRound = {this.state.wonRound}
         />
         <Home>
           {this.state.characters.map(character => (
