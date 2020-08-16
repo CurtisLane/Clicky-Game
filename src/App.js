@@ -14,7 +14,9 @@ class App extends Component {
     highScore: 0,
     message: '',
     round: 1,
-    previousRound: 1
+    previousRound: 1,
+    wonRound: false,
+    gameOver: false
   }
 
   randomize = characterArr => {
@@ -26,6 +28,7 @@ class App extends Component {
   };
 
   handleClick = id => {
+    this.setState({ wonRound: false, gameOver: false})
     if (this.state.selected.indexOf(id) === -1 || this.state.score % 12 === 0) {
       this.handleIncrement();
       this.setState({ selected: this.state.selected.concat(id) });
@@ -59,6 +62,7 @@ class App extends Component {
       message: "You got them all!! Great work!",
       round: this.state.round + 1,
       previousRound: this.state.round - 1,
+      wonRound: true
     }, function(){
       this.setState({
         selected: []
@@ -74,7 +78,8 @@ class App extends Component {
       round: 1,
       previousRound: 1,
       highScore: this.state.highScore,
-      message: 'Game Over! Try again :)' 
+      message: 'Game Over! Try again :)',
+      gameOver: true
     });
     this.handleRandomize();
   };
@@ -100,6 +105,8 @@ class App extends Component {
               id = {character.id}  
               name = {character.name}  
               image = {character.image}
+              wonRound = {this.state.wonRound}
+              gameOver = {this.state.gameOver}
               key = {character.id}
               handleClick = {this.handleClick}
               handleIncrement = {this.handleIncrement}
